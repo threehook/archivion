@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="ArchiMetal" id="615265c5" version="3.1.1">
+  <folder name="Business" id="f8583fe2" type="business">
+    <folder name="Information" id="72a08af5">
+      <element xsi:type="archimate:BusinessObject" id="bfa27fae" name="Production Order"/>
+    </folder>
+    <element xsi:type="archimate:BusinessActor" id="1e7eb138" name="ArchiMetal Production center"/>
+    <element xsi:type="archimate:BusinessFunction" id="574546b7" name="Production"/>
+    <element xsi:type="archimate:BusinessFunction" id="4c7853a5" name="Logistics"/>
+    <element xsi:type="archimate:BusinessProcess" id="f0545b74" name="Processing raw materials"/>
+  </folder>
+  <folder name="Application" id="6892c4c9" type="application"/>
+  <folder name="Technology" id="6e01f497" type="technology"/>
+  <folder name="Motivation" id="dbe9a643" type="motivation"/>
+  <folder name="Implementation &amp; Migration" id="7fdc4b48" type="implementation_migration"/>
+  <folder name="Connectors" id="755b6a7a" type="connectors"/>
+  <folder name="Relations" id="603bccda" type="relations">
+    <element xsi:type="archimate:AssignmentRelationship" id="7b17092e" source="1e7eb138" target="574546b7"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="03177838" source="1e7eb138" target="4c7853a5"/>
+  </folder>
+  <folder name="Views" id="408d960a" type="diagrams">
+    <element xsi:type="archimate:ArchimateDiagramModel" id="21203c72" name="Default View">
+      <child xsi:type="archimate:Group" id="13fe2ac3" name="Physical production processes" textAlignment="1">
+        <bounds x="129" y="360" width="592" height="140"/>
+        <child xsi:type="archimate:DiagramObject" id="e97a789f" textAlignment="2" archimateElement="f0545b74">
+          <bounds x="24" y="48" width="120" height="55"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="2d3533a1" textAlignment="2" archimateElement="1e7eb138">
+        <bounds x="370" y="231" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="91caf0e9" source="2d3533a1" target="06a26fa1" relationship="7b17092e"/>
+        <sourceConnection xsi:type="archimate:Connection" id="fc7ea773" source="2d3533a1" target="e412a7ac" relationship="03177838"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="06a26fa1" textAlignment="2" targetConnections="91caf0e9" archimateElement="574546b7">
+        <bounds x="204" y="231" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="e412a7ac" textAlignment="2" targetConnections="fc7ea773" archimateElement="4c7853a5">
+        <bounds x="528" y="231" width="120" height="55"/>
+      </child>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" id="2d62ae65" name="Business Process View" viewpoint="8">
+      <child xsi:type="archimate:DiagramObject" id="fa232671" textAlignment="2" archimateElement="bfa27fae">
+        <bounds x="270" y="92" width="120" height="55"/>
+      </child>
+    </element>
+  </folder>
+</archimate:model>
